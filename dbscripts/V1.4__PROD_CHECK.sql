@@ -1,6 +1,0 @@
--- Create the table
-CREATE OR REPLACE TABLE PROD_WEATHER
-(
-     V VARCHAR
-    ,T TIMESTAMP
-);
