@@ -42,4 +42,4 @@ jobs:
           pip install schemachange
           
           echo "STEP 2: Running schemachange"
-          schemachange -f $GITHUB_WORKSPACE/dbscripts -a $SNOWFLAKE_ACCOUNT -u $SNOWFLAKE_USER -r $SNOWFLAKE_ROLE -w $SNOWFLAKE_WAREHOUSE -d $SNOWFLAKE_DATABASE -c $SNOWFLAKE_DATABASE.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table -v -ac 
+          schemachange -f $GITHUB_WORKSPACE/devscripts -a $SNOWFLAKE_ACCOUNT -u $SNOWFLAKE_USER -r $SNOWFLAKE_ROLE -w $SNOWFLAKE_WAREHOUSE -d $SNOWFLAKE_DATABASE -c $SNOWFLAKE_DATABASE.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table -v -ac 
