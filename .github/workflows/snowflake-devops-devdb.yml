@@ -1,4 +1,4 @@
- name: snowflake-devops-dev-db
+name: snowflake-devops-dev-db
 
 # Controls when the workflow will run
 on:
