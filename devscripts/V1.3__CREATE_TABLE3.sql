@@ -1,0 +1,7 @@
+-- Create the table
+
+CREATE OR REPLACE TABLE PUBLIC.WEATHER3
+(
+     V VARCHAR
+    ,T TIMESTAMP
+);
