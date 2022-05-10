@@ -1,4 +1,4 @@
-name: snowflake-devops-demo
+ name: snowflake-devops-dev-db
 
 # Controls when the workflow will run
 on:
@@ -6,7 +6,7 @@ on:
     branches: 
       - main
     paths:
-      - 'dbscripts/**'
+      - 'devscripts/**'
     
 
   # Allows you to run this workflow manually from the Actions tab
@@ -42,4 +42,4 @@ jobs:
           pip install schemachange
           
           echo "STEP 2: Running schemachange"
-          schemachange -f $GITHUB_WORKSPACE/dbscripts -a $SNOWFLAKE_ACCOUNT -u $SNOWFLAKE_USER -r $SNOWFLAKE_ROLE -w $SNOWFLAKE_WAREHOUSE -d $SNOWFLAKE_DATABASE -c $SNOWFLAKE_DATABASE.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table --vars '{"$SNOWFLAKE_DATABASE": "DEMO_DB"}' -v -ac                                                                   
+          schemachange -f $GITHUB_WORKSPACE/dbscripts -a $SNOWFLAKE_ACCOUNT -u $SNOWFLAKE_USER -r $SNOWFLAKE_ROLE -w $SNOWFLAKE_WAREHOUSE -d $SNOWFLAKE_DATABASE -c $SNOWFLAKE_DATABASE.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table -v -ac 
